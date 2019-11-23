@@ -1,21 +1,24 @@
 ## Availability
 
+The web implementation of this plugin uses the [Generic Sensor API](https://developer.mozilla.org/en-US/docs/Web/API/Sensor_APIs)
+which is not implemented in many Browsers by now. 
+
 | SensorType | Web | Android | iOS |
 | --- | :---: | :---: | :---: |
 | AMBIENT_LIGHT | <ul><li> [x] * </li></ul> | <ul><li> [x] </li></ul>  | |
 | AMBIENT_PRESSURE |  | <ul><li> [x] </li></ul> | |
 | RELATIVE_HUMIDITY | | <ul><li> [x] </li></ul> | |
-| ACCELEROMETER | - [x] * | <ul><li> [x] </li></ul> | |
+| ACCELEROMETER | <ul><li> [x] * </li></ul> | <ul><li> [x] </li></ul> | |
 | GRAVITY | | <ul><li> [x] </li></ul> | |
-| GYROSCOPE | - [x] * | <ul><li> [x] </li></ul> | |
-| LINEAR_ACCELERATION | - [x] * | <ul><li> [x] </li></ul> | |
+| GYROSCOPE | <ul><li> [x] * </li></ul> | <ul><li> [x] </li></ul> | |
+| LINEAR_ACCELERATION | <ul><li> [x] * </li></ul> | <ul><li> [x] </li></ul> | |
 | ROTATION_VECTOR | | <ul><li> [x] </li></ul> | |
 | GAME_ROTATION_VECTOR | | <ul><li> [x] </li></ul> | |
 | GEOMAGNETIC_ROTATION_VECTOR | | <ul><li> [x] </li></ul> | |
-| MAGENTIC_FIELD | - [x] * | <ul><li> [x] </li></ul> | |
+| MAGENTIC_FIELD | <ul><li> [x] * </li></ul> | <ul><li> [x] </li></ul> | |
 | PROXIMITY | | <ul><li> [x] </li></ul> | |
-| ABSOLUTE_ORIENTATION | - [x] * | | |
-| RELATIVE_ORIENTATION | - [x] * | | | 
+| ABSOLUTE_ORIENTATION | <ul><li> [x] * </li></ul> | | |
+| RELATIVE_ORIENTATION | <ul><li> [x] * </li></ul> | | | 
 
 \* requires `chrome://flags/#enable-generic-sensor-extra-classes` to be enabled
 
