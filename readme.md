@@ -1,19 +1,19 @@
 ## Availability
 
 | SensorType | Web | Android | iOS |
-| --- | --- | --- | --- |
+| --- | :---: | :---: | :---: |
 | AMBIENT_LIGHT | - [x] * | <ul><li> [x] </li></ul>  | |
-| AMBIENT_PRESSURE |  | - [x] | |
-| RELATIVE_HUMIDITY | | - [x] | |
-| ACCELEROMETER | - [x] * | - [x] | |
-| GRAVITY | | - [x] | |
-| GYROSCOPE | - [x] * | - [x] | |
-| LINEAR_ACCELERATION | - [x] * | - [x] | |
-| ROTATION_VECTOR | | - [x] | |
-| GAME_ROTATION_VECTOR | | - [x] | |
-| GEOMAGNETIC_ROTATION_VECTOR | | - [x] | |
-| MAGENTIC_FIELD | - [x] * | - [x] | |
-| PROXIMITY | | - [x] | |
+| AMBIENT_PRESSURE |  | <ul><li> [x] </li></ul> | |
+| RELATIVE_HUMIDITY | | <ul><li> [x] </li></ul> | |
+| ACCELEROMETER | - [x] * | <ul><li> [x] </li></ul> | |
+| GRAVITY | | <ul><li> [x] </li></ul> | |
+| GYROSCOPE | - [x] * | <ul><li> [x] </li></ul> | |
+| LINEAR_ACCELERATION | - [x] * | <ul><li> [x] </li></ul> | |
+| ROTATION_VECTOR | | <ul><li> [x] </li></ul> | |
+| GAME_ROTATION_VECTOR | | <ul><li> [x] </li></ul> | |
+| GEOMAGNETIC_ROTATION_VECTOR | | <ul><li> [x] </li></ul> | |
+| MAGENTIC_FIELD | - [x] * | <ul><li> [x] </li></ul> | |
+| PROXIMITY | | <ul><li> [x] </li></ul> | |
 | ABSOLUTE_ORIENTATION | - [x] * | | |
 | RELATIVE_ORIENTATION | - [x] * | | | 
 
