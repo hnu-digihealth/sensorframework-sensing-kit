@@ -2,7 +2,7 @@
 
 | SensorType | Web | Android | iOS |
 | --- | :---: | :---: | :---: |
-| AMBIENT_LIGHT | - [x] * | <ul><li> [x] </li></ul>  | |
+| AMBIENT_LIGHT | <ul><li> [x] * </li></ul> | <ul><li> [x] </li></ul>  | |
 | AMBIENT_PRESSURE |  | <ul><li> [x] </li></ul> | |
 | RELATIVE_HUMIDITY | | <ul><li> [x] </li></ul> | |
 | ACCELEROMETER | - [x] * | <ul><li> [x] </li></ul> | |
