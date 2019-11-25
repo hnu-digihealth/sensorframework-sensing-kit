@@ -1,3 +1,3 @@
 export * from './definitions';
 export * from './web';
-export {SensorName} from "./core/sensor-type.enum";
+export {SensorType} from "./core/sensor-type.enum";
