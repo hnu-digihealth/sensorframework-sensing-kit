@@ -67,7 +67,14 @@ public class SensingKit extends Plugin {
     public void isSensorActive(PluginCall call){
 
         String sensorName = call.getString(keySensorName);
+
+        if(sensorName == null){
+            call.reject("Missing property 'name'");
+            return;
+        }
+
         Boolean active = isActive(sensorName);
+
         JSObject ret = new JSObject();
         ret.put(keyIsActive, active);
 
@@ -91,6 +98,12 @@ public class SensingKit extends Plugin {
         }
 
         Integer delayProp = call.getInt(keyDelay);
+
+        if(delayProp != null && delayProp != 0){
+            //Convert frequncy to microseconds
+            delayProp = (int) Math.floor((1/delayProp)*1000);
+        }
+
         final Integer delay = delayProp != null ? delayProp : SensorManager.SENSOR_DELAY_NORMAL;
 
 

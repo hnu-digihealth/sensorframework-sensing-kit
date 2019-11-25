@@ -17,9 +17,9 @@ public class MagneticFieldListener extends AbstractSensorListener {
     protected JSObject toJSON(final float[] values) {
 
         JSObject ret = new JSObject(){{
-           put("x", values[0]);
-           put("y", values[1]);
-           put("z", values[2]);
+            put(keyX, values[0]);
+            put(keyY, values[1]);
+            put(keyZ, values[2]);
         }};
 
         return ret;

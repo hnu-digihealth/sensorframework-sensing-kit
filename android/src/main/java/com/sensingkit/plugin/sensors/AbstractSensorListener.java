@@ -15,6 +15,12 @@ public abstract class AbstractSensorListener implements SensorEventListener {
     private static final String eventSensorChanged = "SensorChanged";
     private static final String keyAccuracy = "accuracy";
 
+    protected static final String keyX = "x";
+    protected static final String keyY = "y";
+    protected static final String keyZ = "z";
+    protected static final String keyW = "w";
+    protected static final String keyValue = "value";
+
     public AbstractSensorListener(SensingKit kit){
         this.kit = kit;
     }

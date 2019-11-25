@@ -60,7 +60,7 @@ export class SensingKitWeb extends WebPlugin implements SensingKitPlugin {
     }
 
     const sensorClass = SensorNameResolver[name].class;
-    const {permissions} = SensorNameResolver[name];
+    const {permissions, maxFrequency} = SensorNameResolver[name];
 
     const hasRequiredPermissions = await this.checkPermissions(permissions);
 
@@ -68,7 +68,9 @@ export class SensingKitWeb extends WebPlugin implements SensingKitPlugin {
       throw new Error(`${name}: Missing one of the following permissions ${permissions.join(" , ")}`)
     }
 
-    const sensor = new sensorClass({frequency: frequency || 10});
+    const useFrequency = (frequency != undefined) ? (frequency < maxFrequency) ? frequency : maxFrequency : maxFrequency;
+
+    const sensor = new sensorClass({frequency: useFrequency});
 
     sensor.onreading = () => {
       const {getValue} = SensorNameResolver[name];

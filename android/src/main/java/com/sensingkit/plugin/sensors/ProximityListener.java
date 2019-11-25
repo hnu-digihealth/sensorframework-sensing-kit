@@ -17,7 +17,7 @@ public class ProximityListener extends AbstractSensorListener {
     protected JSObject toJSON(final float[] values) {
 
         JSObject ret = new JSObject(){{
-            put("value", values[0]);
+            put(keyValue, values[0]);
         }};
 
         return ret;

@@ -13,13 +13,13 @@ public class GyroscopeListener extends AbstractSensorListener {
     }
 
     @Override
-    protected JSObject toJSON(float[] values) {
+    protected JSObject toJSON(final float[] values) {
 
-        JSObject ret = new JSObject();
-
-        ret.put("x", values[0]);
-        ret.put("y", values[1]);
-        ret.put("z", values[2]);
+        JSObject ret = new JSObject(){{
+            put(keyX, values[0]);
+            put(keyY, values[1]);
+            put(keyZ, values[2]);
+        }};
 
         return ret;
     }

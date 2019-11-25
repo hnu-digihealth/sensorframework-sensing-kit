@@ -6,8 +6,6 @@ import com.sensingkit.plugin.SensingKit;
 
 public abstract class AbstractEnvironmentSensorListener extends AbstractSensorListener{
 
-    private static final String keyValue = "value";
-
     public AbstractEnvironmentSensorListener(SensingKit kit){
         super(kit);
     }

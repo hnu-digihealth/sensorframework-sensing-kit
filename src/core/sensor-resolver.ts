@@ -9,7 +9,7 @@ import {
 import {SensorType} from "./sensor-type.enum";
 import {SensorPermission} from "./sensor-permission.enum";
 
-export const SensorNameResolver: {[name: string]: {class: {new (options: SensorOptions): Sensor}, permissions: string[], maxFrequency?: number, getValue: (sensor: Sensor) => any}} = {
+export const SensorNameResolver: {[name: string]: {class: {new (options: SensorOptions): Sensor}, permissions: string[], maxFrequency: number, getValue: (sensor: Sensor) => any}} = {
     [SensorType.AMBIENT_LIGHT]: {
         class: (window as any).AmbientLightSensor,
         permissions: [SensorPermission.AMBIENT_LIGHT],
@@ -21,6 +21,7 @@ export const SensorNameResolver: {[name: string]: {class: {new (options: SensorO
     },
     [SensorType.ABSOLUTE_ORIENTATION]: {
         class: (window as any).AbsoluteOrientationSensor,
+        maxFrequency: 60,
         permissions: [SensorPermission.ACCELEROMETER, SensorPermission.GYROSCOPE, SensorPermission.MAGNETOMETER],
         getValue: (sensor: OrientationSensor) => {
             const x = sensor.quaternion[0];
@@ -78,6 +79,7 @@ export const SensorNameResolver: {[name: string]: {class: {new (options: SensorO
     [SensorType.RELATIVE_ORIENTATION]: {
         class: (window as any).RelativeOrientationSensor,
         permissions: [SensorPermission.ACCELEROMETER, SensorPermission.GYROSCOPE],
+        maxFrequency: 60,
         getValue: ( sensor: OrientationSensor) => {
             const x = sensor.quaternion[0];
             const y = sensor.quaternion[1];
