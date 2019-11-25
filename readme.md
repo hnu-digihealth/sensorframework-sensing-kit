@@ -1,3 +1,45 @@
+[![npm version](https://badge.fury.io/js/cap-sensing-kit.svg)](https://badge.fury.io/js/cap-sensing-kit)
+
+## Installation
+
+Install the package via npm
+
+`npm install --save cap-sensing-kit`
+
+In your capacitor project, make sure to register the Android plugin in in the projects MainActivity as follows
+
+```
+import com.sensingkit.plugin.SensingKit;
+
+public class MainActivity extends BridgeActivity {
+  @Override
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+
+    this.init(savedInstanceState, new ArrayList<Class<? extends Plugin>>() {{
+      add(SensingKit.class);
+    }});
+  }
+}
+```
+In your application, use the plugin as described below
+```typescript
+
+import "cap-sensing-kit";
+import {Plugins} from "@capacitor/core";
+
+const {SensingKit} = Plugins;
+
+//...do something with the plugin
+
+```
+
+If you just want to use the web implementation, you can import the plugin directly
+```typescript
+import {SensingKit} from "cap-sensing-kit";
+//...do something with the plugin
+```
+
 ## Availability
 
 The web implementation of this plugin uses the [Generic Sensor API](https://developer.mozilla.org/en-US/docs/Web/API/Sensor_APIs)
@@ -82,3 +124,4 @@ in the web implementation. For Android it defaults to SENSOR_DELAY_NORMAL (5 *Hz
 ### stop
 `stop(options: {name: string}): Promise<void>`
 Stops the propagation of sensor events for the specified sensor.
+
