@@ -17,6 +17,7 @@ export interface SensingKitPlugin {
 }
 
 export const sensorChangedEventName = (sensorName: string) => `${sensorName}SensorChanged`;
+export const sensorErrorEventName = (sensorName: string) => `${sensorName}SensorError`;
 export const accuracyChangedEventName = (sensorName: string) => `${sensorName}AccuracyChanged`;
 
 

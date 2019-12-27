@@ -2,7 +2,7 @@ import { WebPlugin } from '@capacitor/core';
 import { SensingKitPlugin } from './definitions';
 import {SensorNameResolver} from "./core/sensor-resolver";
 import {Sensor} from "./core/sensor-web-definitions";
-import {sensorChangedEventName} from "./definitions";
+import {sensorChangedEventName, sensorErrorEventName} from "./definitions";
 
 export class SensingKitWeb extends WebPlugin implements SensingKitPlugin {
 
@@ -77,6 +77,10 @@ export class SensingKitWeb extends WebPlugin implements SensingKitPlugin {
       const data = getValue(sensor);
 
       this.notifyListeners(sensorChangedEventName(name), data);
+    };
+
+    sensor.onerror = (error) => {
+      this.notifyListeners(sensorErrorEventName(name), error);
     };
 
     sensor.onactivate = () => {
